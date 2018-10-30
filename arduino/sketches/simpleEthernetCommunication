@@ -1,0 +1,85 @@
+
+//zoomkat 3-25-12
+//submit box code
+//for use with IDE 1.0
+//open serial monitor to see what the arduino receives
+//use the \ slash to escape the " in the html 
+//address will look like http://192.168.1.102:84 when submited
+//for use with W5100 based ethernet shields
+//note that the below bug fix may be required
+// http://code.google.com/p/arduino/issues/detail?id=605 
+
+#include <SPI.h>
+#include <Ethernet.h>
+
+byte mac[] = { 0xf8, 0x0b, 0xbe, 0x70, 0x60, 0x88}; //physical mac address
+byte ip[] = { 104, 238, 119,129};
+//byte ip[] = { 192, 168, 1, 10}; // ip in lan
+byte gateway[] = { 192, 168, 1, 1 }; // internet access via router
+byte subnet[] = { 255, 255, 255, 0 }; //subnet mask
+EthernetClient client;
+EthernetServer server(80);; //server port
+char serverName[] = "http://robertpattersonus.com/"; // test web page server
+//byte serverName[] = { 208, 104, 2, 86 }; // (IP) zoomkat web page server IP address
+String readString; 
+
+//////////////////////
+
+void setup(){
+
+  pinMode(4, OUTPUT); //pin selected to control
+  //start Ethernet
+  Ethernet.begin(mac, ip, gateway, subnet);
+  server.begin();
+
+  //enable serial data print 
+  Serial.begin(9600); 
+  Serial.println("servertest1"); // so I can keep track of what is loaded
+}
+
+void loop(){
+  // Create a client connection
+  EthernetClient client = server.available();
+  if (client) {
+    Serial.println("client exists");
+    while (client.connected()) {
+      if (client.available()) {
+        char c = client.read();
+  // Serial.println("connected and char read");
+        //read char by char HTTP request
+        if (readString.length() < 100) {
+
+          //store characters to string 
+          readString += c; 
+       //   Serial.print(c);
+        } 
+
+        //if HTTP request has ended
+        if (c == '\n') {
+        // Set pins here
+        	Serial.println("set pins now: ");
+        	Serial.print(readString);
+        // Delay then poll server again	
+        	 delay(10000);	
+
+        }
+      }
+    }
+  }  
+}
+
+void sendGET(){    //client function to send and receive GET data from external server.
+	   if (client.connect(serverName, 80)) {
+	     Serial.println("connected to rdp server");
+	     client.println("GET /arduino/php/getReceived.php?polling=true");
+	     client.println();
+	   } 
+	   else {
+	     Serial.println("connection to rdp server failed");
+	     Serial.println();
+	   }
+
+//      	   while(client.connected() && !client.available()) delay(1); //waits for data
+
+	 }
+

@@ -1,0 +1,346 @@
+/* float: left;
+*/
+   BODY 
+   {
+      font-family: Arial,Helvetica,sanserif;
+      font-size: 9pt;
+   }
+
+   P
+   {
+       font-family: Arial,Helvetica,sanserif;
+       font-size: 9pt
+   }
+   	
+   A    { font-size: 9pt}
+
+	.lnk2
+	{
+	    font-size: 9pt;
+        color: blue;
+	    text-decoration: none
+	}
+	
+	
+	.mjr
+	{
+		font-family : Arial;
+		font-weight : bold;
+		font-size: 11pt 
+	}	
+	
+	.mnr
+	{
+		font-size: 8pt 
+	}
+	
+	CITE { font-size: 10pt }
+	CITE { font-style: normal }
+	
+   FORM { font-family: Arial,Helvetica,sanserif}
+   FORM { font-size: 10pt }
+   
+   TABLE {
+	background-color : #FFFFFF; 
+   	font-family: Arial,Helvetica,sanserif;
+    font-size: 9pt;
+	}
+	
+	td
+	{
+		padding: 5px;	 			
+	}
+
+   SPAN { font-size: 10pt }
+	P { font-size: 10pt }
+//	B  { font-family: Arial,Helvetica,sanserif}
+	UL { font-family: Arial,Helvetica,sanserif}
+	UL { font-size: 12pt}
+	OL { font-family: Arial,Helvetica,sanserif}
+		
+   #smallText  P { font-family: Arial,Helvetica,sanserif}
+   #smallText  P {  font-size: 8pt }
+   #smallText  P A { text-decoration: underline }
+   #smallText  H2{font-size: 16pt}
+   #smallText  H2 {color: #cc0066}
+   #smallText  BODY {background-color: #cc0066}
+
+	#small
+	{
+		font-family: Arial,Helvetica,sanserif;
+		font-size: 8pt;	
+	}
+	.small
+	{
+		font-family: Arial,Helvetica,sanserif;
+		font-size: 10pt;	
+	}
+    .flyby
+   {
+		position: absolute;
+		font-family: Arial,Helvetica,sanserif;
+		background-color: #ffffff;
+		font-size: 10pt;
+		z-index:100;
+		top: 0px;
+		left: 20px;
+		visibility: hidden;
+		padding: 5px;
+		border: solid 2px #000000;
+		width: 250px;
+    }
+	
+    .myspan
+   {
+		font-family: Arial,Helvetica,sanserif;
+		background-color : #C0C0C0;
+		font-size: 10pt;
+	/*	visibility: hidden;	 */
+    }
+	
+	.changeDiv
+	{
+	background-color : #FFF2CA;
+	}
+	
+	.emph
+	{
+		background-color : #C0C0C0;	
+	}
+
+
+	#colHead
+	{
+		background-color : #DFDFDF;
+		font-weight: bold; 
+	}
+	
+	#minor
+	{
+		background-color : #E8DCD4;
+		font-size: 9pt;
+	}
+	
+	#major
+	{
+		background-color: #fffff0;
+		font-size: 10pt;
+	}
+	#undist
+	{
+		background-color: #EBF2EB;
+		font-size: 10pt;	
+	}
+	
+	/* noteWindow is the iframe window */
+
+	#noteWindow P {
+		font-size: 10pt
+	}
+	#noteWindow strong {font-size: 12pt}
+	#noteWindow
+	{
+		 position: absolute;  
+		background-color: #ffffff;
+		font-family: Arial,Helvetica,sanserif;
+		font-size: 10pt;
+		z-index:50;
+		top: 0px;
+		left: 0px;
+		padding: 2px;
+		border: solid 2px #000000;
+		width: 170px;
+	 }
+	#helpWindow
+	{
+		position: absolute;  
+		background-color: #ffffff;
+		font-family: Arial,Helvetica,sanserif;
+		font-size: 10pt;
+		z-index:50;
+		top: 0px;
+		left: 0px;
+		padding: 2px;
+		border: solid 2px #000000;
+		width: 300px;
+	 }
+	 
+
+
+ 	.indented
+	{
+		position: relative;
+		left: 5%;
+	}
+	
+	#hiddentd
+	{
+		background-color : #E6E2D6;	
+	}
+   
+   #button
+   {
+	border-top-style : solid;
+	border-bottom-color : #000000;
+	border-right-color : #000000;
+	border-top-color : #c0c0c0;
+	border-left-style : solid;
+	border-bottom-style : solid;
+	border-right-style : solid;
+	border-left-color : #c0c0c0;
+	background-color : #BDDECD;
+}
+
+	#note P {
+		font-size: 10pt
+	}
+	#note strong {font-size: 12pt}
+	#note
+	{
+		position: absolute;  
+		background-color: #ffffff;
+		font-family: Arial,Helvetica,sanserif;
+		font-size: 10pt;
+		z-index:50;
+		top: 0px;
+		left: 0px;
+		width: 179px;
+	 }
+	 
+	 .buttonHlp
+	 {
+		background-color: #ff0000;
+		font-size: 8pt;
+	}
+
+	#select
+	{
+		background-color: #ffcc99;
+	}
+	#data
+	{
+		background-color: #ccddff;
+		vertical-align:text-top;	
+	}
+	.ref
+	{
+		background-color: #ccccff;	
+	}
+	.areaWhite
+	{
+		background-color: #ffffff;
+	}
+	.itemSel
+	{
+		font-size: 14pt;
+		font-weight: bold;
+	}
+	.secHead
+	{
+		font-size: 10pt;
+		font-weight: bold;
+	}
+	.data
+	{
+		background-color: #ccddff;	
+	}
+	.select
+	{
+		background-color: #ffcc99;
+	}
+	.menuItem
+	{
+		background-color: #99FF66;
+		cursor: pointer;
+		font-size: 14pt;
+	}
+	.menuItemDark
+	{
+		background-color: #88ee55;
+		cursor: pointer;
+	}	
+	.hideIt 
+	{
+ 	 display: none;
+	}
+	.table1vis 
+	{
+  		display: block;
+		position: relative;
+		left: 5%;
+		width: 85%;		
+	}
+	.table1none 
+	{
+ 	 display: block;
+	 width: 80%;
+	}
+	.showIt 
+	{
+  		display: block;
+		position: relative;		
+	}
+	
+	.hideIt 
+	{
+ 	 	display: none;
+	}
+	.colHead
+	{
+		background-color : #DFDFDF;
+		font-weight: bold; 
+	}
+	.highlighted
+	{
+		background-color : #DFDFDF;
+	}
+	.noHighlight
+	{
+		background-color : #FFFFFF;
+	}
+
+#databaseSpan{
+	font-size:14px;
+	font-weight:bold; 
+}
+table.paddedTable td{ 
+	padding:10px;
+}
+#pregLiverKidney, #scratchPadBtn{
+	cursor:pointer;
+}
+.alignTop{
+	vertical-align:text-top;
+}
+
+.noteColor1{
+	background-color: #FF5D75;
+	}
+.noteColor2{
+	background-color: #FF9600;
+}
+.noteColor3{
+	background-color: #FFFF77;
+}
+.noteColor4{
+	background-color: #87ED99;
+}
+.noteColor99{
+	background-color: #ccddff;
+}
+.redText{
+	color: #F00;
+}
+.myFieldset{
+	border: solid 1px #000000;
+	padding: 5px;
+}
+.med
+	{
+		font-family: Arial;
+		font-size: 11pt;	
+	}
+
+
+
+
